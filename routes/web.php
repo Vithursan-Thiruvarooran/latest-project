@@ -27,6 +27,11 @@ Route::get('/test', function () {
     return view('test', compact('name', 'tasks'));
 });
 
+Route::get('/db', function () {
+
+    return view('dbPage');
+});
+
 Route::get('/db/{title}', function ($title) {
    
     $tasks = DB::table('titles')
